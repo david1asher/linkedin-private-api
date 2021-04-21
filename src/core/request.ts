@@ -12,10 +12,11 @@ type ConfigNonFullResponse = AxiosRequestConfig & { fullResponse?: false };
 export class Request {
   request: AxiosInstance;
 
-  constructor() {
+  constructor(config: AxiosRequestConfig = {}) {
     this.request = axios.create({
       paramsSerializer,
       withCredentials: true,
+      ...(config),
     });
   }
 

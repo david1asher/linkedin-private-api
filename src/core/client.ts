@@ -1,3 +1,4 @@
+import { AxiosRequestConfig } from 'axios';
 import {
   ConversationRepository,
   InvitationRepository,
@@ -9,17 +10,33 @@ import { LinkedInRequest } from './linkedin-request';
 import { Login } from './login';
 
 export class Client {
-  request = new LinkedInRequest();
+  request: LinkedInRequest;
 
-  login = new Login({ client: this });
+  login: Login;
 
-  search = new SearchRepository({ client: this });
+  search: SearchRepository;
 
-  invitation = new InvitationRepository({ client: this });
+  invitation: InvitationRepository;
 
-  profile = new ProfileRepository({ client: this });
+  profile: ProfileRepository;
 
-  conversation = new ConversationRepository({ client: this });
+  conversation: ConversationRepository;
 
-  message = new MessageRepository({ client: this });
+  message: MessageRepository;
+
+  constructor(options: { config?: AxiosRequestConfig } = {}) {
+    this.request = new LinkedInRequest(options.config);
+
+    this.login = new Login({ client: this });
+
+    this.search = new SearchRepository({ client: this });
+
+    this.invitation = new InvitationRepository({ client: this });
+
+    this.profile = new ProfileRepository({ client: this });
+
+    this.conversation = new ConversationRepository({ client: this });
+
+    this.message = new MessageRepository({ client: this });
+  }
 }

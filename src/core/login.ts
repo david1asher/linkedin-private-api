@@ -1,3 +1,4 @@
+import { Country } from './../types/country-code.enum';
 import { parse as parseCookie } from 'cookie';
 import * as fs from 'fs/promises';
 import { merge, pickBy, reduce } from 'lodash';
@@ -54,7 +55,7 @@ export class Login {
     }
 
     if (useCache) {
-      const cookies = cachedSessions[username];
+      const {cookies, country} = cachedSessions[username];
 
       if (cookies) {
         this.setRequestHeaders({ cookies });
@@ -74,7 +75,7 @@ export class Login {
     const authRes = await this.client.request.auth.authenticateUser({ username, password, sessionId });
 
     const parsedCookies = parseCookies<AuthCookies>(authRes.headers['set-cookie']);
-    fs.writeFile(SESSIONS_PATH, JSON.stringify({ ...cachedSessions, [username]: parsedCookies }));
+    fs.writeFile(SESSIONS_PATH, JSON.stringify({ ...cachedSessions, [username]: {cookies: parsedCookies, country: "us"} }));
 
     this.setRequestHeaders({ cookies: parsedCookies });
 
