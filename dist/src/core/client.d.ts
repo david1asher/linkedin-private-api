@@ -10,7 +10,5 @@ export declare class Client {
     profile: ProfileRepository;
     conversation: ConversationRepository;
     message: MessageRepository;
-    constructor(options?: {
-        config?: AxiosRequestConfig;
-    });
+    constructor(options?: AxiosRequestConfig);
 }

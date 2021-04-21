@@ -24,8 +24,8 @@ export class Client {
 
   message: MessageRepository;
 
-  constructor(options: { config?: AxiosRequestConfig } = {}) {
-    this.request = new LinkedInRequest(options.config);
+  constructor(options: AxiosRequestConfig = {}) {
+    this.request = new LinkedInRequest(options);
 
     this.login = new Login({ client: this });
 

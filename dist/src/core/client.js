@@ -6,7 +6,7 @@ const linkedin_request_1 = require("./linkedin-request");
 const login_1 = require("./login");
 class Client {
     constructor(options = {}) {
-        this.request = new linkedin_request_1.LinkedInRequest(options.config);
+        this.request = new linkedin_request_1.LinkedInRequest(options);
         this.login = new login_1.Login({ client: this });
         this.search = new repositories_1.SearchRepository({ client: this });
         this.invitation = new repositories_1.InvitationRepository({ client: this });
