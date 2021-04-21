@@ -55,7 +55,7 @@ export class Login {
     }
 
     if (useCache) {
-      const {cookies, country} = cachedSessions[username];
+      const cookies = cachedSessions[username];
 
       if (cookies) {
         this.setRequestHeaders({ cookies });
