@@ -75,7 +75,7 @@ export class Login {
     const authRes = await this.client.request.auth.authenticateUser({ username, password, sessionId });
 
     const parsedCookies = parseCookies<AuthCookies>(authRes.headers['set-cookie']);
-    fs.writeFile(SESSIONS_PATH, JSON.stringify({ ...cachedSessions, [username]: {cookies: parsedCookies, country: "us"} }));
+    fs.writeFile(SESSIONS_PATH, JSON.stringify({ ...cachedSessions, [username]: { cookies: parsedCookies } }));
 
     this.setRequestHeaders({ cookies: parsedCookies });
 
