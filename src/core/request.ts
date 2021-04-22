@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios-https-proxy-fix';
 import { URL } from 'url';
 
 import { linkedinApiUrl } from '../../config';
@@ -16,7 +16,7 @@ export class Request {
     this.request = axios.create({
       paramsSerializer,
       withCredentials: true,
-      ...(config),
+      ...config,
     });
   }
 

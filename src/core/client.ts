@@ -1,4 +1,4 @@
-import { AxiosRequestConfig } from 'axios';
+import { AxiosRequestConfig } from 'axios-https-proxy-fix';
 import {
   ConversationRepository,
   InvitationRepository,

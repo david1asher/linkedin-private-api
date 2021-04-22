@@ -1,4 +1,4 @@
-import { AxiosResponse } from 'axios';
+import { AxiosResponse } from 'axios-https-proxy-fix';
 import { stringify as queryStringify } from 'querystring';
 
 import { authHeaders, authUrl } from '../../config';

@@ -6,31 +6,31 @@
 
 ## Hierarchy
 
-* **Login**
+- **Login**
 
 ## Index
 
 ### Constructors
 
-* [constructor](_src_core_login_.login.md#constructor)
+- [constructor](_src_core_login_.login.md#constructor)
 
 ### Methods
 
-* [userPass](_src_core_login_.login.md#userpass)
+- [userPass](_src_core_login_.login.md#userpass)
 
 ## Constructors
 
 ### constructor
 
-\+ **new Login**(`__namedParameters`: { client: [Client](_src_core_client_.client.md)  }): [Login](_src_core_login_.login.md)
+\+ **new Login**(`__namedParameters`: { client: [Client](_src_core_client_.client.md) }): [Login](_src_core_login_.login.md)
 
-*Defined in [src/core/login.ts:22](https://github.com/eilonmore/linkedin-private-api/blob/a50722e/src/core/login.ts#L22)*
+_Defined in [src/core/login.ts:23](https://github.com/david1asher/linkedin-private-api/blob/8f509eb/src/core/login.ts#L23)_
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`__namedParameters` | { client: [Client](_src_core_client_.client.md)  } |
+| Name                | Type                                              |
+| ------------------- | ------------------------------------------------- |
+| `__namedParameters` | { client: [Client](_src_core_client_.client.md) } |
 
 **Returns:** [Login](_src_core_login_.login.md)
 
@@ -38,14 +38,14 @@ Name | Type |
 
 ### userPass
 
-▸ **userPass**(`__namedParameters`: { password: undefined \| string ; useCache: boolean = true; username: string  }): Promise\<[Client](_src_core_client_.client.md)>
+▸ **userPass**(`__namedParameters`: { password: undefined \| string ; useCache: boolean = true; username: string }): Promise<[Client](_src_core_client_.client.md)\>
 
-*Defined in [src/core/login.ts:38](https://github.com/eilonmore/linkedin-private-api/blob/a50722e/src/core/login.ts#L38)*
+_Defined in [src/core/login.ts:39](https://github.com/david1asher/linkedin-private-api/blob/8f509eb/src/core/login.ts#L39)_
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`__namedParameters` | { password: undefined \| string ; useCache: boolean = true; username: string  } |
+| Name                | Type                                                                           |
+| ------------------- | ------------------------------------------------------------------------------ |
+| `__namedParameters` | { password: undefined \| string ; useCache: boolean = true; username: string } |
 
-**Returns:** Promise\<[Client](_src_core_client_.client.md)>
+**Returns:** Promise<[Client](_src_core_client_.client.md)\>
