@@ -1,4 +1,4 @@
-import { AxiosRequestConfig } from 'axios-https-proxy-fix';
+import { ClientOptions } from '../types';
 import {
   ConversationRepository,
   InvitationRepository,
@@ -9,6 +9,7 @@ import {
 import { LinkedInRequest } from './linkedin-request';
 import { Login } from './login';
 export declare class Client {
+  options: ClientOptions;
   request: LinkedInRequest;
   login: Login;
   search: SearchRepository;
@@ -16,5 +17,5 @@ export declare class Client {
   profile: ProfileRepository;
   conversation: ConversationRepository;
   message: MessageRepository;
-  constructor(options?: AxiosRequestConfig);
+  constructor(options?: ClientOptions);
 }

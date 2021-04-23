@@ -161,9 +161,74 @@
         "signature": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
         "affectsGlobalScope": true
       },
+      "../src/types/anonymous-cookies.ts": {
+        "version": "be77bde976e6ba53dea60956037b61c528c66b16853b9745ea4335c61696f24e",
+        "signature": "32f61b68dfbd02fe325313e74ce2d5717b963916782bb303f6daf5081fa88db3",
+        "affectsGlobalScope": false
+      },
+      "../src/types/auth-cookies.ts": {
+        "version": "bb873eb130bec8cf71a83570ea447e224f2103c96525b067a4649b7a9800b608",
+        "signature": "d52eb6029e18b7732282dda3ddd67605e3b77df09fb3c2b4aa654065c975ea16",
+        "affectsGlobalScope": false
+      },
+      "../src/types/contract-interest.enum.ts": {
+        "version": "9e6aaad548bbf2381bd94ba7270d781ec92f1157baf5a7d0fdde63f2cdbfa33d",
+        "signature": "b637aabab10a5ec9aa4a968f7291145abba35b846872bcbcc660018394224cbb",
+        "affectsGlobalScope": false
+      },
+      "../src/types/language-code.enum.ts": {
+        "version": "85a5f54d2b120d32598113502e2702a9ac75588a7cd8f9cce53561dcd4a5b8ee",
+        "signature": "8a55b71d643c8d086f99fdd22caee72f2a633d8b954b0a17592b2a3ee1e79378",
+        "affectsGlobalScope": false
+      },
+      "../src/types/network.enum.ts": {
+        "version": "86a754b65225f51c39144555187776720c176ec114cef2d36d658106b3d5d46d",
+        "signature": "793156d8e36f43076b216d2c0aab815e9ab3e574d992ad9997ef2162fe189b00",
+        "affectsGlobalScope": false
+      },
+      "../src/types/people-search-filters.ts": {
+        "version": "ee5a4328a44b6ab4304811edd5f168d9c225c3b839251d48e6a4c8584ccf1650",
+        "signature": "f684fe3c55e6eee9a5ce115176dcaa674e5c9f790c38c542439e7343b0eeeced",
+        "affectsGlobalScope": false
+      },
+      "../src/types/search-type.enum.ts": {
+        "version": "6792f2177498fa1dec845278c7aadd5b16b140ed98f35090c5a4b0cfcdcbafea",
+        "signature": "7cb5409d19e6d6eb975d7bc332ec3003f4f6ccd35efbddd9ac561594e4644c0b",
+        "affectsGlobalScope": false
+      },
+      "../src/types/blended-search-filters.ts": {
+        "version": "a2f1b07e2fda528b7a1ada8abf33f40bd6e071239795931dc6abd6aaca502349",
+        "signature": "c1ca777d92e31104d49486a319b962655c6faa9c8e98c0636fed41601c95398a",
+        "affectsGlobalScope": false
+      },
+      "../src/types/country-code.enum.ts": {
+        "version": "4de8a78f9b43708781fd448413c66d8eee7388ae8fcd02fc86f1f0bb65412ebe",
+        "signature": "7d4a3324fcbaa3eba1d993a5fbd8581f2a0c59bd70824780d421b6ca0d896a38",
+        "affectsGlobalScope": false
+      },
+      "../src/types/search-result-type.enum.ts": {
+        "version": "8d275b3b19a965336428ff6a74a35dc222e2f89dac038c9b96b46f899e07bfa3",
+        "signature": "383405891ce87b4bd82cf697fa9122c4cf1df6ea7aa623dab9f7a8226f00f8fa",
+        "affectsGlobalScope": false
+      },
+      "../src/types/client.interface.ts": {
+        "version": "7b3a2909dc11a639104c7fc80195c46229ef1b028abaf5fd4eaeda2064323566",
+        "signature": "9edb431c96847a2d5fb27909d3c0fca28b2fd3bd2c85793b810dbafe5ec293ec",
+        "affectsGlobalScope": false
+      },
       "../node_modules/axios-https-proxy-fix/index.d.ts": {
         "version": "0f7b72c4d941161b4e1a3830c7fd20f12acf9490cecb06ebf2c48ca327112c70",
         "signature": "0f7b72c4d941161b4e1a3830c7fd20f12acf9490cecb06ebf2c48ca327112c70",
+        "affectsGlobalScope": false
+      },
+      "../src/types/client-options.ts": {
+        "version": "9c515f40204de72fa9bdfdf752756ffe0860dbcbec19d9cad222efb3e0614fd8",
+        "signature": "86460ea8958c7a891f17de9eb7930789f187d90f3faf33a7b93b7043fc0cc25b",
+        "affectsGlobalScope": false
+      },
+      "../src/types/index.ts": {
+        "version": "093de0803f8623d734d6df2969328c70de30ed80d05c9fcfe7dde6fdc6b0abb2",
+        "signature": "093de0803f8623d734d6df2969328c70de30ed80d05c9fcfe7dde6fdc6b0abb2",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/lodash/common/common.d.ts": {
@@ -351,19 +416,9 @@
         "signature": "494f481ed4e939baf19c4e6cb58ec2332bb26839ceb0302ffc06c508c4a76853",
         "affectsGlobalScope": false
       },
-      "../src/types/country-code.enum.ts": {
-        "version": "4de8a78f9b43708781fd448413c66d8eee7388ae8fcd02fc86f1f0bb65412ebe",
-        "signature": "7d4a3324fcbaa3eba1d993a5fbd8581f2a0c59bd70824780d421b6ca0d896a38",
-        "affectsGlobalScope": false
-      },
       "../src/entities/linkedin-profile.entity.ts": {
         "version": "72f76ef1f652d8f40f202f71fce6309ac31f54ec94fc247330bdfbbff4cac6b4",
         "signature": "b6a63cb6fefe8a9e69b1956daf051b82aca8f09a66570b35b6fb66f3f6a06ae8",
-        "affectsGlobalScope": false
-      },
-      "../src/types/search-result-type.enum.ts": {
-        "version": "8d275b3b19a965336428ff6a74a35dc222e2f89dac038c9b96b46f899e07bfa3",
-        "signature": "383405891ce87b4bd82cf697fa9122c4cf1df6ea7aa623dab9f7a8226f00f8fa",
         "affectsGlobalScope": false
       },
       "../src/entities/linkedin-search-cluster.entity.ts": {
@@ -441,26 +496,6 @@
         "signature": "3ebdd1d31a94b49abd4bd580ac115fafbf10a25fed9149eebf0129d512a10458",
         "affectsGlobalScope": false
       },
-      "../src/types/contract-interest.enum.ts": {
-        "version": "9e6aaad548bbf2381bd94ba7270d781ec92f1157baf5a7d0fdde63f2cdbfa33d",
-        "signature": "b637aabab10a5ec9aa4a968f7291145abba35b846872bcbcc660018394224cbb",
-        "affectsGlobalScope": false
-      },
-      "../src/types/language-code.enum.ts": {
-        "version": "85a5f54d2b120d32598113502e2702a9ac75588a7cd8f9cce53561dcd4a5b8ee",
-        "signature": "8a55b71d643c8d086f99fdd22caee72f2a633d8b954b0a17592b2a3ee1e79378",
-        "affectsGlobalScope": false
-      },
-      "../src/types/network.enum.ts": {
-        "version": "86a754b65225f51c39144555187776720c176ec114cef2d36d658106b3d5d46d",
-        "signature": "793156d8e36f43076b216d2c0aab815e9ab3e574d992ad9997ef2162fe189b00",
-        "affectsGlobalScope": false
-      },
-      "../src/types/people-search-filters.ts": {
-        "version": "ee5a4328a44b6ab4304811edd5f168d9c225c3b839251d48e6a4c8584ccf1650",
-        "signature": "f684fe3c55e6eee9a5ce115176dcaa674e5c9f790c38c542439e7343b0eeeced",
-        "affectsGlobalScope": false
-      },
       "../src/scrollers/people-search.scroller.ts": {
         "version": "e14e1e1c6ad437fefc00b9194599cf31903035d57c557f3d56c30d22cc0fa3c8",
         "signature": "494559b83b6e910e93230425a3fb90d335ddc8a5f4931729c7e28b6b53b8714e",
@@ -494,11 +529,6 @@
       "../src/scrollers/company-search.scroller.ts": {
         "version": "2bafeab42222c2c7ea0d8060dd0d68807a23291610aacacc24fce9e2c296b6fc",
         "signature": "05e7ab90c9f04c55a6530ffb6d988314266ba4290f68a7dfc1df99fbd860218e",
-        "affectsGlobalScope": false
-      },
-      "../src/types/search-type.enum.ts": {
-        "version": "6792f2177498fa1dec845278c7aadd5b16b140ed98f35090c5a4b0cfcdcbafea",
-        "signature": "7cb5409d19e6d6eb975d7bc332ec3003f4f6ccd35efbddd9ac561594e4644c0b",
         "affectsGlobalScope": false
       },
       "../src/repositories/search.repository.ts": {
@@ -561,11 +591,6 @@
         "signature": "16b8b444e59dab01f4a9249186c38f01e9ff6f605c05780ec041f8fe4f521b69",
         "affectsGlobalScope": false
       },
-      "../src/types/blended-search-filters.ts": {
-        "version": "a2f1b07e2fda528b7a1ada8abf33f40bd6e071239795931dc6abd6aaca502349",
-        "signature": "c1ca777d92e31104d49486a319b962655c6faa9c8e98c0636fed41601c95398a",
-        "affectsGlobalScope": false
-      },
       "../src/requests/search.request.ts": {
         "version": "73ee23685daea352057f859d9ef2a6728d905f1f91ca7d8a5ffc92253ecbc824",
         "signature": "54c4522f49f65df8e81b4324f9c0bd2eb89c689dbc974ee611c83c8d731d0f8b",
@@ -591,39 +616,19 @@
         "signature": "405ad6db8aa3d5618c3be21cde8125de28a3e40690eb05136c123f420c05c082",
         "affectsGlobalScope": false
       },
-      "../src/types/anonymous-cookies.ts": {
-        "version": "be77bde976e6ba53dea60956037b61c528c66b16853b9745ea4335c61696f24e",
-        "signature": "32f61b68dfbd02fe325313e74ce2d5717b963916782bb303f6daf5081fa88db3",
-        "affectsGlobalScope": false
-      },
-      "../src/types/auth-cookies.ts": {
-        "version": "bb873eb130bec8cf71a83570ea447e224f2103c96525b067a4649b7a9800b608",
-        "signature": "d52eb6029e18b7732282dda3ddd67605e3b77df09fb3c2b4aa654065c975ea16",
-        "affectsGlobalScope": false
-      },
       "../src/core/login.ts": {
-        "version": "625fdba40b5397a956ba13a42a999b6fa7689b01fd38d2ee395c87806df7a210",
+        "version": "34d408c4ebe07dbd6ae2726b935da97977f00158129d9fb47295b7a961c1c181",
         "signature": "ca9bfb783cedd5e44605be57b35e6846c5890c417d9d825db909059d84613926",
         "affectsGlobalScope": false
       },
       "../src/core/client.ts": {
-        "version": "ec48be05600481b48ff3824e09382c1b4179302c3eb9814918ce98a1ef1f8e39",
-        "signature": "5316b6c1cde55958123f780353e4c00c28b3516c5a2fc5a3ae237b5464a82768",
+        "version": "b3bca1018aed5ab2eab256d22272fb3c726921069abcea56b21b0b3e70033777",
+        "signature": "43690a5df779b200989a24175afc3c4c42d68f2b975128e1aaf77bde0fa5b8a9",
         "affectsGlobalScope": false
       },
       "../src/core/index.ts": {
         "version": "a3fa4373171a3684e69fe2220ca3ab5caecce14d3bb929a1c1191cbb4e264c8c",
         "signature": "a3fa4373171a3684e69fe2220ca3ab5caecce14d3bb929a1c1191cbb4e264c8c",
-        "affectsGlobalScope": false
-      },
-      "../src/types/client.interface.ts": {
-        "version": "7b3a2909dc11a639104c7fc80195c46229ef1b028abaf5fd4eaeda2064323566",
-        "signature": "9edb431c96847a2d5fb27909d3c0fca28b2fd3bd2c85793b810dbafe5ec293ec",
-        "affectsGlobalScope": false
-      },
-      "../src/types/index.ts": {
-        "version": "612749c45b42f00d2732e49dabc87193ccbc693441eb9b402edd0deb026bf79f",
-        "signature": "612749c45b42f00d2732e49dabc87193ccbc693441eb9b402edd0deb026bf79f",
         "affectsGlobalScope": false
       },
       "../src/responses/index.ts": {
@@ -1513,10 +1518,10 @@
         "../node_modules/pretty-format/build/types.d.ts"
       ],
       "../src/core/client.ts": [
-        "../node_modules/axios-https-proxy-fix/index.d.ts",
         "../src/core/linkedin-request.ts",
         "../src/core/login.ts",
-        "../src/repositories/index.ts"
+        "../src/repositories/index.ts",
+        "../src/types/index.ts"
       ],
       "../src/core/index.ts": [
         "../src/core/client.ts"
@@ -1537,8 +1542,7 @@
         "../node_modules/@types/node/fs/promises.d.ts",
         "../src/core/client.ts",
         "../src/types/anonymous-cookies.ts",
-        "../src/types/auth-cookies.ts",
-        "../src/types/country-code.enum.ts"
+        "../src/types/auth-cookies.ts"
       ],
       "../src/core/request.ts": [
         "../config/index.ts",
@@ -1857,6 +1861,11 @@
         "../src/types/people-search-filters.ts",
         "../src/types/search-type.enum.ts"
       ],
+      "../src/types/client-options.ts": [
+        "../node_modules/axios-https-proxy-fix/index.d.ts",
+        "../src/types/auth-cookies.ts",
+        "../src/types/index.ts"
+      ],
       "../src/types/client.interface.ts": [
         "../src/core/client.ts"
       ],
@@ -1864,6 +1873,7 @@
         "../src/types/anonymous-cookies.ts",
         "../src/types/auth-cookies.ts",
         "../src/types/blended-search-filters.ts",
+        "../src/types/client-options.ts",
         "../src/types/client.interface.ts",
         "../src/types/contract-interest.enum.ts",
         "../src/types/country-code.enum.ts",
@@ -2355,10 +2365,10 @@
         "../node_modules/pretty-format/build/types.d.ts"
       ],
       "../src/core/client.ts": [
-        "../node_modules/axios-https-proxy-fix/index.d.ts",
         "../src/core/linkedin-request.ts",
         "../src/core/login.ts",
-        "../src/repositories/index.ts"
+        "../src/repositories/index.ts",
+        "../src/types/index.ts"
       ],
       "../src/core/index.ts": [
         "../src/core/client.ts"
@@ -2649,6 +2659,11 @@
         "../src/types/people-search-filters.ts",
         "../src/types/search-type.enum.ts"
       ],
+      "../src/types/client-options.ts": [
+        "../node_modules/axios-https-proxy-fix/index.d.ts",
+        "../src/types/auth-cookies.ts",
+        "../src/types/index.ts"
+      ],
       "../src/types/client.interface.ts": [
         "../src/core/client.ts"
       ],
@@ -2656,6 +2671,7 @@
         "../src/types/anonymous-cookies.ts",
         "../src/types/auth-cookies.ts",
         "../src/types/blended-search-filters.ts",
+        "../src/types/client-options.ts",
         "../src/types/client.interface.ts",
         "../src/types/contract-interest.enum.ts",
         "../src/types/country-code.enum.ts",
@@ -2868,6 +2884,7 @@
       "../src/types/anonymous-cookies.ts",
       "../src/types/auth-cookies.ts",
       "../src/types/blended-search-filters.ts",
+      "../src/types/client-options.ts",
       "../src/types/client.interface.ts",
       "../src/types/contract-interest.enum.ts",
       "../src/types/country-code.enum.ts",

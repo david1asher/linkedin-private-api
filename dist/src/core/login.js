@@ -1,46 +1,9 @@
 'use strict';
-var __createBinding =
-  (this && this.__createBinding) ||
-  (Object.create
-    ? function (o, m, k, k2) {
-        if (k2 === undefined) k2 = k;
-        Object.defineProperty(o, k2, {
-          enumerable: true,
-          get: function () {
-            return m[k];
-          },
-        });
-      }
-    : function (o, m, k, k2) {
-        if (k2 === undefined) k2 = k;
-        o[k2] = m[k];
-      });
-var __setModuleDefault =
-  (this && this.__setModuleDefault) ||
-  (Object.create
-    ? function (o, v) {
-        Object.defineProperty(o, 'default', { enumerable: true, value: v });
-      }
-    : function (o, v) {
-        o['default'] = v;
-      });
-var __importStar =
-  (this && this.__importStar) ||
-  function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null)
-      for (var k in mod) if (k !== 'default' && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-  };
 Object.defineProperty(exports, '__esModule', { value: true });
 exports.Login = void 0;
 const cookie_1 = require('cookie');
-const fs = __importStar(require('fs/promises'));
 const lodash_1 = require('lodash');
 const config_1 = require('../../config');
-const SESSIONS_PATH = `${process.cwd()}/sessions.json`;
 const parseCookies = cookies =>
   cookies.reduce((res, c) => {
     let parsedCookie = cookie_1.parse(c);
@@ -60,15 +23,10 @@ class Login {
     });
   }
   async userPass({ username, password, useCache = true }) {
-    let cachedSessions;
-    try {
-      const sessionsBuffer = (await fs.readFile(SESSIONS_PATH).catch(() => fs.writeFile(SESSIONS_PATH, '{}'))) || '{}';
-      cachedSessions = JSON.parse(sessionsBuffer.toString());
-    } catch (err) {
-      cachedSessions = {};
-    }
-    if (useCache) {
-      const cookies = cachedSessions[username];
+    let cache;
+    if (useCache && this.client.options.sessionCache) {
+      cache = this.client.options.sessionCache;
+      const cookies = await cache.get(username);
       if (cookies) {
         this.setRequestHeaders({ cookies });
         return this.client;
@@ -81,7 +39,9 @@ class Login {
     const sessionId = parseCookies(anonymousAuthResponse.headers['set-cookie']).JSESSIONID;
     const authRes = await this.client.request.auth.authenticateUser({ username, password, sessionId });
     const parsedCookies = parseCookies(authRes.headers['set-cookie']);
-    fs.writeFile(SESSIONS_PATH, JSON.stringify({ ...cachedSessions, [username]: { cookies: parsedCookies } }));
+    if (cache) {
+      cache.set(username, parsedCookies);
+    }
     this.setRequestHeaders({ cookies: parsedCookies });
     return this.client;
   }

@@ -1,4 +1,3 @@
-import { Country } from './../types/country-code.enum';
 import { parse as parseCookie } from 'cookie';
 import * as fs from 'fs/promises';
 import { merge, pickBy, reduce } from 'lodash';
@@ -7,8 +6,6 @@ import { requestHeaders } from '../../config';
 import { AnonymousCookies } from '../types/anonymous-cookies';
 import { AuthCookies } from '../types/auth-cookies';
 import { Client } from './client';
-
-const SESSIONS_PATH = `${process.cwd()}/sessions.json`;
 
 const parseCookies = <T>(cookies: string[]): Partial<T> =>
   cookies.reduce((res, c) => {
@@ -45,17 +42,11 @@ export class Login {
     password?: string;
     useCache?: boolean;
   }): Promise<Client> {
-    let cachedSessions: Record<string, AuthCookies>;
+    let cache;
 
-    try {
-      const sessionsBuffer = (await fs.readFile(SESSIONS_PATH).catch(() => fs.writeFile(SESSIONS_PATH, '{}'))) || '{}';
-      cachedSessions = JSON.parse(sessionsBuffer.toString());
-    } catch (err) {
-      cachedSessions = {};
-    }
-
-    if (useCache) {
-      const cookies = cachedSessions[username];
+    if (useCache && this.client.options.sessionCache) {
+      cache = this.client.options.sessionCache;
+      const cookies = await cache.get(username);
 
       if (cookies) {
         this.setRequestHeaders({ cookies });
@@ -75,7 +66,10 @@ export class Login {
     const authRes = await this.client.request.auth.authenticateUser({ username, password, sessionId });
 
     const parsedCookies = parseCookies<AuthCookies>(authRes.headers['set-cookie']);
-    fs.writeFile(SESSIONS_PATH, JSON.stringify({ ...cachedSessions, [username]: { cookies: parsedCookies } }));
+
+    if (cache) {
+      cache.set(username, parsedCookies);
+    }
 
     this.setRequestHeaders({ cookies: parsedCookies });
 
