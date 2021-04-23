@@ -617,7 +617,7 @@
         "affectsGlobalScope": false
       },
       "../src/core/login.ts": {
-        "version": "34d408c4ebe07dbd6ae2726b935da97977f00158129d9fb47295b7a961c1c181",
+        "version": "cad98e0c009377a6984023e4ca8301ceee754d087f911dc1d11ed4dde0058081",
         "signature": "ca9bfb783cedd5e44605be57b35e6846c5890c417d9d825db909059d84613926",
         "affectsGlobalScope": false
       },
@@ -1539,7 +1539,6 @@
         "../config/index.ts",
         "../node_modules/@types/cookie/index.d.ts",
         "../node_modules/@types/lodash/index.d.ts",
-        "../node_modules/@types/node/fs/promises.d.ts",
         "../src/core/client.ts",
         "../src/types/anonymous-cookies.ts",
         "../src/types/auth-cookies.ts"

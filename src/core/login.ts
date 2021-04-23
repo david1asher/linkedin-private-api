@@ -1,5 +1,4 @@
 import { parse as parseCookie } from 'cookie';
-import * as fs from 'fs/promises';
 import { merge, pickBy, reduce } from 'lodash';
 
 import { requestHeaders } from '../../config';
