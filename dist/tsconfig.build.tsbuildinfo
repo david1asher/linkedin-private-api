@@ -507,8 +507,8 @@
         "affectsGlobalScope": false
       },
       "../src/repositories/invitation.repository.ts": {
-        "version": "7e6284347bcf76c3264e52f447d564215a288779dc561eb65c8a0e6eb7828e9d",
-        "signature": "4737d8e92dcd0e0febe6c716b27a9d4530adfb6c22750d087fad6635869c883f",
+        "version": "637d129e85dcba99b4266b5e23b470a9d1bee76129cacd52c27a1ee03de31676",
+        "signature": "dd57aaf7ca9c718f49fb9dab110a135239896932d050106760875b1c8683dff3",
         "affectsGlobalScope": false
       },
       "../src/responses/messages.response.get.ts": {
@@ -562,7 +562,7 @@
         "affectsGlobalScope": false
       },
       "../src/requests/invitation.request.ts": {
-        "version": "7a0b9c8ce0fd444351e0226f3229925a04a064e2c8043db7aacd7e8b189e4b0d",
+        "version": "e49a72ec731123b3a37df6e9c66f34792bf600c9f64bb54256b2c1593a926272",
         "signature": "edd045c4654fc752eabb461634332fb733622470bd75182422a78ef1a0f56b55",
         "affectsGlobalScope": false
       },
