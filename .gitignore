@@ -3,4 +3,5 @@ yarn-error.log
 sessions.json
 .vscode/
 .DS_Store
+.history
 coverage

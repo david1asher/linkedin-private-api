@@ -562,8 +562,8 @@
         "affectsGlobalScope": false
       },
       "../src/requests/invitation.request.ts": {
-        "version": "ad5a7049c1859164b28f6cc4d235f32f0f5ebafa01cf45a99d66baefe87f0ba7",
-        "signature": "21d2541b7a3d36eb6f274d7f945870aef1997400b1fc115e6dbbbea7cafb048a",
+        "version": "7a0b9c8ce0fd444351e0226f3229925a04a064e2c8043db7aacd7e8b189e4b0d",
+        "signature": "edd045c4654fc752eabb461634332fb733622470bd75182422a78ef1a0f56b55",
         "affectsGlobalScope": false
       },
       "../src/responses/message.response.post.ts": {
