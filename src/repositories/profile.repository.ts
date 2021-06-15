@@ -31,8 +31,8 @@ export const getProfilesFromResponse = <T extends { data: any; included: (Linked
   const newProfiles = transformedMiniProfiles.map(prof => ({
     ...prof,
     memberDistance: response.data.elements
-      .find((a: { type: string }) => a.type === 'SEARCH_HITS')
-      .elements.find((a: { publicIdentifier: string }) => a.publicIdentifier === prof.publicIdentifier).memberDistance,
+      ?.find((a: { type: string }) => a.type === 'SEARCH_HITS')
+      .elements?.find((a: { publicIdentifier: string }) => a.publicIdentifier === prof.publicIdentifier)?.memberDistance,
   }));
 
   return keyBy(newProfiles, 'profileId');
