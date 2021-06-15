@@ -20,14 +20,22 @@ const transformMiniProfile = (miniProfile: LinkedInMiniProfile): MiniProfile => 
   };
 };
 
-export const getProfilesFromResponse = <T extends { included: (LinkedInMiniProfile | { $type: string })[] }>(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const getProfilesFromResponse = <T extends { data: any; included: (LinkedInMiniProfile | { $type: string })[] }>(
   response: T,
 ): Record<ProfileId, MiniProfile> => {
   const miniProfiles = filter(response.included, p => p.$type === MINI_PROFILE_TYPE) as LinkedInMiniProfile[];
 
   const transformedMiniProfiles = miniProfiles.map((miniProfile: LinkedInMiniProfile) => transformMiniProfile(miniProfile));
 
-  return keyBy(transformedMiniProfiles, 'profileId');
+  const newProfiles = transformedMiniProfiles.map(prof => ({
+    ...prof,
+    memberDistance: response.data.elements
+      .find(a => a.type == 'SEARCH_HITS')
+      .elements.find(a => a.publicIdentifier == prof.publicIdentifier).memberDistance,
+  }));
+
+  return keyBy(newProfiles, 'profileId');
 };
 
 export class ProfileRepository {
