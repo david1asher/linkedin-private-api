@@ -462,8 +462,8 @@
         "affectsGlobalScope": false
       },
       "../src/repositories/profile.repository.ts": {
-        "version": "3a8d21bf8f7d8dc01f92e92fa218aab954ff9fe94fe1f7e84e5446b0a70fd87b",
-        "signature": "be6a2b35d83200e1b9fcce6767d9744a57a8efcb067d288dc8357e0ddcb50459",
+        "version": "c43e8ed6387403c332718a0ec910aaf8dd28b4e3c45abdf3a962de2a732405ff",
+        "signature": "fcdc9d22baec167f44f3a1967e7e7ce529bd8cb1de5ef4ad70952d4db4e5a94d",
         "affectsGlobalScope": false
       },
       "../src/repositories/conversation.repository.ts": {
