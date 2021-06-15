@@ -21,12 +21,22 @@ const transformMiniProfile = miniProfile => {
 exports.getProfilesFromResponse = response => {
   const miniProfiles = lodash_1.filter(response.included, p => p.$type === linkedin_mini_profile_entity_1.MINI_PROFILE_TYPE);
   const transformedMiniProfiles = miniProfiles.map(miniProfile => transformMiniProfile(miniProfile));
-  const newProfiles = transformedMiniProfiles.map(prof => ({
-    ...prof,
-    memberDistance: response.data.elements
-      .find(a => a.type === 'SEARCH_HITS')
-      .elements.find(a => a.publicIdentifier === prof.publicIdentifier).memberDistance,
-  }));
+  const newProfiles = transformedMiniProfiles.map(prof => {
+    var _a, _b, _c;
+    return {
+      ...prof,
+      memberDistance:
+        (_c =
+          (_b =
+            (_a = response.data.elements) === null || _a === void 0
+              ? void 0
+              : _a.find(a => a.type === 'SEARCH_HITS').elements) === null || _b === void 0
+            ? void 0
+            : _b.find(a => a.publicIdentifier === prof.publicIdentifier)) === null || _c === void 0
+          ? void 0
+          : _c.memberDistance,
+    };
+  });
   return lodash_1.keyBy(newProfiles, 'profileId');
 };
 class ProfileRepository {

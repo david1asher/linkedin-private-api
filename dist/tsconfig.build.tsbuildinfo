@@ -462,7 +462,7 @@
         "affectsGlobalScope": false
       },
       "../src/repositories/profile.repository.ts": {
-        "version": "c43e8ed6387403c332718a0ec910aaf8dd28b4e3c45abdf3a962de2a732405ff",
+        "version": "5544df115043071046aaa2f46372c9af5b19d38f5ed62c13cd95838753fc1dd9",
         "signature": "fcdc9d22baec167f44f3a1967e7e7ce529bd8cb1de5ef4ad70952d4db4e5a94d",
         "affectsGlobalScope": false
       },
